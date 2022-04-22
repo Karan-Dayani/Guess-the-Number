@@ -1,0 +1,19 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    background-color: #B4FF9F;
+}
+
+.heading {
+    padding-top: 20px;
+    padding-bottom: 50px;
+    color: #A85CF9;
+}
+
+.btn {
+    margin-top: 10px;
+}
