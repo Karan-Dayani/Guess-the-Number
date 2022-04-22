@@ -16,4 +16,9 @@ body {
 
 .btn {
     margin-top: 10px;
+    border-color: #A85CF9;
+    color: #A85CF9;
+}
+.btn:hover{
+    background-color: #A85CF9;
 }
