@@ -1,12 +1,12 @@
 var inputBox = document.getElementById("inputBox");
 var randomNum = Math.floor(Math.random()*101)
-var inValue = inputBox.innerHTML
 var btn = document.querySelector(".btn")
 
 
-btn.onclick(()=>{
-    console.log(inValue)
-})
+btn.onclick = function() {
+    console.log(inputBox.value)
+}
+
 
 
 var invalidChars = [
