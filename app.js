@@ -19,6 +19,7 @@ var result = document.querySelector(".result");
 var range = document.querySelector(".heading2");
 var count = document.querySelector(".count");
 var point = document.querySelector(".points");
+var restartBtn = document.getElementById("restartBtn");
 var num = 10;
 count.innerHTML = num;
 
@@ -31,16 +32,21 @@ function badaMain() {
     num--
     count.innerHTML = num;
     if (Number(inputBox.value) > randomNum) {
+      range.classList.remove("fadeOut");
       range.innerHTML = "Too High";
       inputBox.value = "";
     } else if (Number(inputBox.value) === randomNum) {
+      result.classList.remove("fadeOut");
       result.innerHTML = "You Won";
       range.innerHTML = "";
       point.innerHTML = "you won " + num + " points.";
     } else if (Number(inputBox.value) < randomNum) {
+      range.classList.remove("fadeOut");
       range.innerHTML = "Too Low";
       inputBox.value = "";
     }
+
+    range.classList.add("fadeOut");
 
     if (num === 0) {
       result.innerHTML = "You Lose";
@@ -53,6 +59,10 @@ function badaMain() {
 
 btn.onclick = function () {
   badaMain();
+}
+
+restartBtn.onclick = function () {
+  document.location.reload();
 }
 
 document.addEventListener("keypress", function (e) {

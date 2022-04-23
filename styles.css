@@ -31,6 +31,7 @@ body {
 
 .heading2{
     color: #A85CF9;
+    transition: opacity 0.5s ease;
 }
 .result{
     color: #A85CF9;
@@ -41,4 +42,8 @@ body {
 }
 .points {
     color: #A85CF9;
+}
+
+.fadeOut {
+    opacity: 0;
 }
