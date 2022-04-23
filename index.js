@@ -17,5 +17,11 @@ var randomNum = Math.floor(Math.random()*101);
 var btn = document.querySelector(".btn");
 
 btn.onclick = function() {
-  console.log(inputBox.value)
+  if (Number(inputBox.value) > randomNum) {
+    console.log("Too High");
+  } else if (Number(inputBox.value) === randomNum) {
+    console.log("You won");
+  } else if (Number(inputBox.value) < randomNum) {
+    console.log("Too Low");
+  }
 }
