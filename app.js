@@ -18,12 +18,14 @@ var btn = document.querySelector(".btn");
 var result = document.querySelector(".result");
 var range = document.querySelector(".heading2");
 var count = document.querySelector(".count");
+var point = document.querySelector(".points");
 var num = 10;
 count.innerHTML = num;
 
 function badaMain() {
   if (inputBox.value === "") {
     result.innerHTML = "ERROR";
+    range.innerHTML = "";
   } else {
     result.innerHTML = "";
     num--
@@ -34,9 +36,7 @@ function badaMain() {
     } else if (Number(inputBox.value) === randomNum) {
       result.innerHTML = "You Won";
       range.innerHTML = "";
-      window.setTimeout(function () {
-        window.location.reload();
-      }, 2000);
+      point.innerHTML = "you won " + num + " points.";
     } else if (Number(inputBox.value) < randomNum) {
       range.innerHTML = "Too Low";
       inputBox.value = "";

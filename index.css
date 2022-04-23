@@ -10,7 +10,7 @@ body {
 
 .heading {
     padding-top: 20px;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
     color: #A85CF9;
 }
 
@@ -38,4 +38,7 @@ body {
 .lead {
     color: #A85CF9;
     font-weight: bold;
+}
+.points {
+    color: #A85CF9;
 }
