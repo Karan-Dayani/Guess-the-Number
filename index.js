@@ -1,13 +1,4 @@
 var inputBox = document.getElementById("inputBox");
-var randomNum = Math.floor(Math.random()*101)
-var btn = document.querySelector(".btn")
-
-
-btn.onclick = function() {
-    console.log(inputBox.value)
-}
-
-
 
 var invalidChars = [
   "-",
@@ -20,3 +11,11 @@ inputBox.addEventListener("keydown", function(e) {
     e.preventDefault();
   }
 });
+
+
+var randomNum = Math.floor(Math.random()*101);
+var btn = document.querySelector(".btn");
+
+btn.onclick = function() {
+  console.log(inputBox.value)
+}
