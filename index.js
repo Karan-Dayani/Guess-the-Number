@@ -21,37 +21,42 @@ var count = document.querySelector(".count");
 var num = 10;
 count.innerHTML = num;
 
-function main() {
-  num--
-  count.innerHTML = num;
-  if (Number(inputBox.value) > randomNum) {
-    range.innerHTML = "Too High";
-    inputBox.value = "";
-  } else if (Number(inputBox.value) === randomNum) {
-    result.innerHTML = "You Won";
-    range.innerHTML = "";
-    window.setTimeout(function () {
-      window.location.reload();
-    }, 2000);
-  } else if (Number(inputBox.value) < randomNum) {
-    range.innerHTML = "Too Low";
-    inputBox.value = "";
-  }
+function badaMain() {
+  if (inputBox.value === "") {
+    result.innerHTML = "ERROR";
+  } else {
+    result.innerHTML = "";
+    num--
+    count.innerHTML = num;
+    if (Number(inputBox.value) > randomNum) {
+      range.innerHTML = "Too High";
+      inputBox.value = "";
+    } else if (Number(inputBox.value) === randomNum) {
+      result.innerHTML = "You Won";
+      range.innerHTML = "";
+      window.setTimeout(function () {
+        window.location.reload();
+      }, 2000);
+    } else if (Number(inputBox.value) < randomNum) {
+      range.innerHTML = "Too Low";
+      inputBox.value = "";
+    }
 
-  if (num === 0) {
-    result.innerHTML = "You Lose";
-    window.setTimeout(function () {
-      window.location.reload();
-    }, 2000);
+    if (num === 0) {
+      result.innerHTML = "You Lose";
+      window.setTimeout(function () {
+        window.location.reload();
+      }, 2000);
+    }
   }
 }
 
 btn.onclick = function () {
-  main();
+  badaMain();
 }
 
 document.addEventListener("keypress", function (e) {
   if (e.key === "Enter") {
-    main();
+    badaMain();
   }
 });
