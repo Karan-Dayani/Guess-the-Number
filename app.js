@@ -45,9 +45,7 @@ function badaMain() {
       range.innerHTML = "Too Low";
       inputBox.value = "";
     }
-
-    range.classList.add("fadeOut");
-
+    
     if (num === 0) {
       result.innerHTML = "You Lose";
       window.setTimeout(function () {
